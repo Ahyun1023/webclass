@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gretting</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+</head>
+<body>
+    <form method="get" action="/calculate1">
+        <input name="num1">
+        <input name="num2">
+        <select name="select">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <button>SUBMIT</button>
+    </form>
+    
+    <br><br>
+    
+    <input id="number1">
+        <input id="number2">
+        <select id="selected">
+        <option value="1">+</option>
+        <option value="2">-</option>
+        <option value="3">*</option>
+        <option value="4">/</option>
+    </select>
+    <button onclick="cal()">SUBMIT</button>
+    
+    <script>
+        function cal(){
+            let num1 = $('#number1').val();
+            let num2 = $('#number2').val();
+            let select = $("#selected option:selected").val();
+            location.href = "calculate2/" + num1 +"/" + num2 + "/" + select;
+        }
+    </script>
+</body>
+</html>
